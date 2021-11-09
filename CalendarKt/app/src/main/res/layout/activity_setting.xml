@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/settingBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Home/저장"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        />
+    <Switch
+        android:id="@+id/useSecondPassword"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="2차 비밀번호 사용하기"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Switch
+        android:id="@+id/zimmonSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="지문으로 로그인"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/secondPasswordSetting"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="2차 비밀번호 설정하기"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+</LinearLayout>
