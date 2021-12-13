@@ -81,6 +81,6 @@ interface CalenderApi {
 
     @POST("/auth")
     fun checkId(
-            @Body nick : String
+            @Body nick : IdCheckRequest
     ):Call<Void>
 }
