@@ -78,4 +78,9 @@ interface CalenderApi {
             @Header("Authorization") header: String,
             @Query("inherence") inherence:String
     ):Call<GetPhotoResponse>
+
+    @POST("/auth")
+    fun checkId(
+            @Body nick : String
+    ):Call<Void>
 }

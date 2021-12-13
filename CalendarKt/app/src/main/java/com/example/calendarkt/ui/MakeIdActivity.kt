@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.calendarkt.R
 import com.example.calendarkt.model.makeId.MakeIdRequest
 import com.example.calendarkt.network.ApiProvider
+import kotlinx.android.synthetic.main.activity_make_id.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,6 +33,20 @@ class MakeIdActivity : AppCompatActivity() {
             val p = password.text.toString()
             val n = nick.text.toString()
             val makeIdRequest = MakeIdRequest(n,p,i)
+
+            val apiProvider1 = ApiProvider.calenderApi().checkId(i)
+            apiProvider1.enqueue(object : Callback<Void> {
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    if (response.code() == 409) {
+                        Toast.makeText(applicationContext,"아이디 중복", Toast.LENGTH_SHORT).show()
+                        return
+                    }
+                    return
+                }
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    Log.d(TAG, "onFailure: 실패")
+                }
+            })
             val apiProvider = ApiProvider.calenderApi().sendMakeId(makeIdRequest)
             apiProvider.enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -48,6 +63,21 @@ class MakeIdActivity : AppCompatActivity() {
                     Log.d(TAG, "onFailure: 실패")
                 }
 
+            })
+        }
+        idCheack.setOnClickListener {
+            val apiProvider = ApiProvider.calenderApi().checkId(id.text.toString())
+            apiProvider.enqueue(object : Callback<Void> {
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    Log.d(TAG, "onResponse: "+response.code())
+                    if (response.code() == 409) {
+                        Toast.makeText(applicationContext, "아이디 중복", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    Log.d(TAG, "onFailure: 실패")
+                }
             })
         }
         back.setOnClickListener {
