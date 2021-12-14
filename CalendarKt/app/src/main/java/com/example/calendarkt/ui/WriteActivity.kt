@@ -221,7 +221,7 @@ class WriteActivity : AppCompatActivity() {
                 }
 
             })
-        } else Toast.makeText(applicationContext, "사진을 엎로드 해주세요.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onResume() {
