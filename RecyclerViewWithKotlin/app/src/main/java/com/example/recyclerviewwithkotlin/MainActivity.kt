@@ -19,21 +19,17 @@ class MainActivity : AppCompatActivity() {
         val send_btn : Button = findViewById(R.id.send_btn)
         val main_text : EditText = findViewById(R.id.main_text)
         var name : String = ""
-        val mainList = ArrayList<MainData>();
+        val mainList = ArrayList<MainData>()
 
-        send_btn.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(v: View?) {
-                name = main_text.text.toString()
-                if(name != "") {
-                    mainList.add(MainData(name))
-                    main_rV.adapter = MainAdapter(mainList)
-                }
-                else{
-                    Toast.makeText(this@MainActivity,"텍스틀를 입력하시오",Toast.LENGTH_LONG).show()
-                }
+        send_btn.setOnClickListener {
+            name = main_text.text.toString()
+            if (name != "") {
+                mainList.add(MainData(name))
+                main_rV.adapter = MainAdapter(mainList)
+            } else {
+                Toast.makeText(this@MainActivity, "텍스트를 입력하시오", Toast.LENGTH_LONG).show()
             }
-
-        })
+        }
         main_rV.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         main_rV.setHasFixedSize(true)
 
