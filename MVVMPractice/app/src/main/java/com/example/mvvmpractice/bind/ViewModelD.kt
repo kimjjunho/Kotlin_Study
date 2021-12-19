@@ -1,10 +1,10 @@
 package com.example.mvvmpractice.bind
 
 import androidx.databinding.ObservableField
+import androidx.lifecycle.ViewModel
 
-class ViewModelD {
+class ViewModelD : ViewModel(){
     val name = ObservableField("")
-
     init {
         name.set("lzone")
     }
