@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.Dimension
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lol.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,14 +22,32 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val mainList = arrayListOf(
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP"),
+            MainData("Hide On bush", "1100LP")
+        )
+        mBinding.rV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        mBinding.rV.setHasFixedSize(true)
+
         mBinding.mBtn.setOnClickListener {
             master()
+            mBinding.rV.adapter = MasterAdapter(mainList)
         }
         mBinding.gmBtn.setOnClickListener {
             gm()
+            mBinding.rV.adapter = GMAdapter(mainList)
         }
         mBinding.cBtn.setOnClickListener {
             chal()
+            mBinding.rV.adapter = ChalAdapter(mainList)
         }
     }
 
