@@ -27,13 +27,13 @@ class MasterAdapter(private val mainList:ArrayList<MainData>):RecyclerView.Adapt
         val view : View = itemView
         val image : ImageView = view.findViewById(R.id.image)
         val nick : TextView = view.findViewById(R.id.nick)
-        val score : TextView = view.findViewById(R.id.score)
+        val score_m : TextView = view.findViewById(R.id.score_m)
 
         fun bind(list:MainData){
             image.setImageResource(R.drawable.m)
             nick.text = list.nick
-            score.visibility = View.VISIBLE
-            score.text = list.score
+            score_m.visibility = View.VISIBLE
+            score_m.text = list.score
         }
     }
 

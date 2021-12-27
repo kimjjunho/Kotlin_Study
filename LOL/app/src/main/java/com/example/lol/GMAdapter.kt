@@ -31,13 +31,14 @@ class GMAdapter(private val mainList:ArrayList<MainData>):RecyclerView.Adapter<G
         val view : View = itemView
         val image : ImageView = view.findViewById(R.id.image)
         val nick : TextView = view.findViewById(R.id.nick)
-        val score : TextView = view.findViewById(R.id.score)
+        val score_gm : TextView = view.findViewById(R.id.score_gm)
 
         fun bind(list:MainData){
             image.setImageResource(R.drawable.gm)
             nick.text = list.nick
-            score.setTextColor(ContextCompat.getColor(itemView, R.color.red))
-            score.text = list.score
+           // score.setTextColor(ContextCompat.getColor(MainActivity(), R.color.red))
+            score_gm.text = list.score
+            score_gm.visibility = View.VISIBLE
         }
     }
 }

@@ -28,13 +28,13 @@ class ChalAdapter(private val mainList:ArrayList<MainData>):RecyclerView.Adapter
         val view : View = itemView
         val image : ImageView = view.findViewById(R.id.image)
         val nick : TextView = view.findViewById(R.id.nick)
-        val score : TextView = view.findViewById(R.id.score)
+        val score_c : TextView = view.findViewById(R.id.score_c)
 
         fun bind(list:MainData){
             image.setImageResource(R.drawable.chal)
             nick.text = list.nick
-            score.visibility = View.VISIBLE
-            score.text = list.score
+            score_c.visibility = View.VISIBLE
+            score_c.text = list.score
         }
     }
 }

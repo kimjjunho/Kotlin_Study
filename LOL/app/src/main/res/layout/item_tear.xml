@@ -26,6 +26,7 @@
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
@@ -36,5 +37,41 @@
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toBottomOf="@+id/nick" />
+        -->
+    <TextView
+        android:id="@+id/score_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="1100LP"
+        android:textColor="#9C27B0"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/nick" />
+
+    <TextView
+        android:id="@+id/score_gm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="1100LP"
+        android:textColor="#F44336"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/nick" />
+    <TextView
+        android:id="@+id/score_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="1100LP"
+        android:textColor="#03A9F4"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/nick" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
