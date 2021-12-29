@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.webkit.WebView
 import androidx.annotation.Dimension
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
