@@ -1,23 +1,22 @@
-package com.example.lol
+package com.example.lol.adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.coroutines.coroutineContext
+import com.example.lol.main.MainResponse
+import com.example.lol.R
 
-class GMAdapter(private val mainList:ArrayList<MainData>):RecyclerView.Adapter<GMAdapter.CustomViewHolder>(){
+class ChalAdapter(private val mainList:ArrayList<MainResponse>):RecyclerView.Adapter<ChalAdapter.CustomViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GMAdapter.CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_tear,parent,false)
         return CustomViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: GMAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val list = mainList[position]
         holder.apply {
             bind(list)
@@ -31,14 +30,13 @@ class GMAdapter(private val mainList:ArrayList<MainData>):RecyclerView.Adapter<G
         val view : View = itemView
         val image : ImageView = view.findViewById(R.id.image)
         val nick : TextView = view.findViewById(R.id.nick)
-        val score_gm : TextView = view.findViewById(R.id.score_gm)
+        val score_c : TextView = view.findViewById(R.id.score_c)
 
-        fun bind(list:MainData){
-            image.setImageResource(R.drawable.gm)
+        fun bind(list: MainResponse){
+            image.setImageResource(R.drawable.chal)
             nick.text = list.nick
-           // score.setTextColor(ContextCompat.getColor(MainActivity(), R.color.red))
-            score_gm.text = list.score
-            score_gm.visibility = View.VISIBLE
+            score_c.visibility = View.VISIBLE
+            score_c.text = list.score
         }
     }
 }
