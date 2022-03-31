@@ -35,6 +35,8 @@ class LiveDataActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+
+
     override fun onClick(view: View?) {
         val userInput = mBinding.editText.text.toString().toInt()
 

@@ -12,7 +12,6 @@ import com.example.mvvmpractice.databinding.ActivityMainBinding
 class DataBindingActivity : AppCompatActivity() {
 
     private lateinit var dBinding: ActivityDataBindingBinding
-   // private var mBinding : ActivityDataBindingBinding? = null
     private val binding get() = dBinding
     private val TAG = "DataBindingActivity"
 
