@@ -32,7 +32,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
     }
 
     private fun scheduleJob(){
-        val work = OneTimeWorkRequest.Builder(MainActivity::class.java)
         d(TAG, "scheduleJob: scheduleJob() 실행")
     }
 
