@@ -12,6 +12,7 @@ import com.google.firebase.messaging.FirebaseMessaging
 class MainActivity : AppCompatActivity() {
 
     val TAG = "MainActivivty"
+    lateinit var str : String
 
     @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,12 @@ class MainActivity : AppCompatActivity() {
             }
             val token = task.result
             val msg = getString(R.string.msg_token_fmt, token)
+            str = msg
             Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })
+
+        btn.setOnClickListener {
+            Log.d(TAG, "onCreate: $str")
+        }
     }
 }

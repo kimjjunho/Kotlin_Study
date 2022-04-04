@@ -1,4 +1,4 @@
 <resources>
     <string name="default_notification_channel_id" translatable="false">FunctionFCM</string>
-    <string name="msg_token_fmt" translatable="false">토큰:%s</string>
+    <string name="msg_token_fmt" translatable="false">%s</string>
 </resources>
