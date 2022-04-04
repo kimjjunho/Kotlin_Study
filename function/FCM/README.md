@@ -137,6 +137,8 @@
 
 ​	
 
+[FunctionFCM] : 기본적인 FCM세팅만 된 파일 코드는 짜보려 노력했지만 이 파일에서 의미있는 코드는 디바이스 토큰을 불러오는 부분 정도이다.
+
 - https://donghun.dev/Firebase-Cloud-Messaging
 - https://m.blog.naver.com/devks0228/221666814076
 - https://seungwoolog.tistory.com/88?category=1019746
