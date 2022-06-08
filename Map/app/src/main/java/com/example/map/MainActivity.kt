@@ -149,5 +149,23 @@ class MainActivity : AppCompatActivity() {
         @JavascriptInterface
         fun getLongitude() = longitude
     }
+
+    inner class MyLocationCallBack : LocationCallback(){
+        override fun onLocationResult(locationResult: LocationResult) {
+            super.onLocationResult(locationResult)
+
+            val location = locationResult.lastLocation
+
+            location.run {
+                @JavascriptInterface
+                fun getLatitudeCallback() = latitude
+
+                @JavascriptInterface
+                fun getLongitudeCallback() = longitude
+            }
+        }
+
+
+    }
 }
 
