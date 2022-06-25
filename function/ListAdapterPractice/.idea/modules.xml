@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListAdapterPractice.iml" filepath="$PROJECT_DIR$/.idea/modules/ListAdapterPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListAdapterPractice.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
